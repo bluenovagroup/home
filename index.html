@@ -13,11 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   TOKENS
-   Palette lifted directly from the mark: the vivid half above
-   the horizon, the desaturated half below it.
-   ============================================================ */
+
 :root{
   --ink:#201818;
   --ink-body:#5C5453;
@@ -47,12 +43,12 @@ body{
   font-family:'Urbanist',system-ui,-apple-system,'Segoe UI',sans-serif;
   font-size:var(--f-body);
   line-height:1.65;
-  font-weight:400;
+  font-weight:300;
   -webkit-font-smoothing:antialiased;
 }
 img,svg{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3,h4{margin:0;letter-spacing:-.03em;line-height:1.04;font-weight:800}
+h1,h2,h3,h4{margin:0;letter-spacing:-.03em;line-height:1.04;font-weight:400}
 
 .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
 .section{padding-block:var(--sect)}
@@ -310,66 +306,16 @@ h1,h2,h3,h4{margin:0;letter-spacing:-.03em;line-height:1.04;font-weight:800}
         <h1>We create digital solutions for <em>the environment, public health, and more.</em>.</h1>
       </div>
       <div class="hero__aside">
-        <p class="lede">Founder-led startup</p>
         <div class="hero__cta">
-          <a class="btn btn--line" href="#process">Learn more</a>
+          <a class="btn btn--line" href="#process">DeepCTM</a>
+          <a class="btn btn--line" href="#process">Enviroscan</a>
           <a class="btn btn--line" href="#process">About us</a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- The mark, redrawn at page width. Colour above the horizon,
-       the same ribbons desaturated below it. -->
-  <div class="horizon" aria-hidden="true">
-    <svg viewBox="0 0 1200 430" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" role="presentation">
-      <defs>
-        <g id="ribbons">
-          <path d="M30,-70 C75,50 -15,170 48,290 C84,390 12,470 39,560"      stroke="#201818" stroke-width="74" fill="none"/>
-          <path d="M30,-70 C75,50 -15,170 48,290 C84,390 12,470 39,560"      stroke="#4FB05C" stroke-width="64" fill="none"/>
-          <path d="M118,-70 C156,50 80,170 133,290 C164,390 95,470 126,560"  stroke="#201818" stroke-width="66" fill="none"/>
-          <path d="M118,-70 C156,50 80,170 133,290 C164,390 95,470 126,560"  stroke="#0E9BDD" stroke-width="56" fill="none"/>
-          <path d="M200,-70 C250,50 150,170 220,290 C260,390 170,470 210,560" stroke="#201818" stroke-width="62" fill="none"/>
-          <path d="M200,-70 C250,50 150,170 220,290 C260,390 170,470 210,560" stroke="#E4EBFA" stroke-width="52" fill="none"/>
-          <path d="M288,-70 C328,50 248,170 304,290 C336,390 264,470 296,560" stroke="#201818" stroke-width="80" fill="none"/>
-          <path d="M288,-70 C328,50 248,170 304,290 C336,390 264,470 296,560" stroke="#4FB05C" stroke-width="70" fill="none"/>
-          <path d="M380,-70 C432,50 328,170 401,290 C442,390 349,470 388,560" stroke="#201818" stroke-width="70" fill="none"/>
-          <path d="M380,-70 C432,50 328,170 401,290 C442,390 349,470 388,560" stroke="#0E9BDD" stroke-width="60" fill="none"/>
-          <path d="M468,-70 C504,50 432,170 482,290 C510,390 447,470 475,560" stroke="#201818" stroke-width="58" fill="none"/>
-          <path d="M468,-70 C504,50 432,170 482,290 C510,390 447,470 475,560" stroke="#FFFFFF" stroke-width="48" fill="none"/>
-          <path d="M548,-70 C594,50 502,170 566,290 C602,390 520,470 555,560" stroke="#201818" stroke-width="68" fill="none"/>
-          <path d="M548,-70 C594,50 502,170 566,290 C602,390 520,470 555,560" stroke="#4FB05C" stroke-width="58" fill="none"/>
-          <path d="M640,-70 C682,50 598,170 657,290 C690,390 615,470 648,560" stroke="#201818" stroke-width="84" fill="none"/>
-          <path d="M640,-70 C682,50 598,170 657,290 C690,390 615,470 648,560" stroke="#0E9BDD" stroke-width="74" fill="none"/>
-          <path d="M740,-70 C794,50 686,170 762,290 C804,390 708,470 748,560" stroke="#201818" stroke-width="66" fill="none"/>
-          <path d="M740,-70 C794,50 686,170 762,290 C804,390 708,470 748,560" stroke="#E4EBFA" stroke-width="56" fill="none"/>
-          <path d="M828,-70 C866,50 790,170 843,290 C874,390 805,470 836,560" stroke="#201818" stroke-width="72" fill="none"/>
-          <path d="M828,-70 C866,50 790,170 843,290 C874,390 805,470 836,560" stroke="#4FB05C" stroke-width="62" fill="none"/>
-          <path d="M918,-70 C966,50 870,170 937,290 C975,390 889,470 926,560" stroke="#201818" stroke-width="78" fill="none"/>
-          <path d="M918,-70 C966,50 870,170 937,290 C975,390 889,470 926,560" stroke="#0E9BDD" stroke-width="68" fill="none"/>
-          <path d="M1012,-70 C1052,50 972,170 1028,290 C1060,390 988,470 1020,560" stroke="#201818" stroke-width="62" fill="none"/>
-          <path d="M1012,-70 C1052,50 972,170 1028,290 C1060,390 988,470 1020,560" stroke="#FFFFFF" stroke-width="52" fill="none"/>
-          <path d="M1098,-70 C1148,50 1048,170 1118,290 C1158,390 1068,470 1108,560" stroke="#201818" stroke-width="74" fill="none"/>
-          <path d="M1098,-70 C1148,50 1048,170 1118,290 C1158,390 1068,470 1108,560" stroke="#4FB05C" stroke-width="64" fill="none"/>
-          <path d="M1185,-70 C1221,50 1149,170 1199,290 C1227,390 1164,470 1192,560" stroke="#201818" stroke-width="66" fill="none"/>
-          <path d="M1185,-70 C1221,50 1149,170 1199,290 C1227,390 1164,470 1192,560" stroke="#E4EBFA" stroke-width="56" fill="none"/>
-        </g>
-        <clipPath id="clipAbove"><rect x="0" y="0" width="1200" height="248"/></clipPath>
-        <clipPath id="clipBelow"><rect x="0" y="252" width="1200" height="178"/></clipPath>
-        <filter id="desat"><feColorMatrix type="saturate" values="0"/></filter>
-        <linearGradient id="fadeGrad" x1="0" y1="252" x2="0" y2="430" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/>
-        </linearGradient>
-        <mask id="fadeOut"><rect x="0" y="252" width="1200" height="178" fill="url(#fadeGrad)"/></mask>
-      </defs>
-
-      <use href="#ribbons" clip-path="url(#clipAbove)"/>
-      <g mask="url(#fadeOut)" filter="url(#desat)" opacity=".9">
-        <use href="#ribbons" clip-path="url(#clipBelow)"/>
-      </g>
-    </svg>
-  </div>
-
+ 
   <div class="wrap">
     <dl class="rail">
     </dl>
@@ -423,19 +369,18 @@ h1,h2,h3,h4{margin:0;letter-spacing:-.03em;line-height:1.04;font-weight:800}
       <div class="ft__links">
         <div>
           <h4>For customers</h4>
-          <a href="#criteria">What we do</a>
-          <a href="#process">Process</a>
-          <a href="#apply">Products</a>
+          <a href="#criteria">Products</a>
+          <a href="#process">Partnerships</a>
+          <a href="#apply">Consulting</a>
         </div>
         <div>
           <h4>What we do</h4>
           <a href="#tracks">DeepCTM</a>
           <a href="#tracks">Enviroscan</a>
-          <a href="#tracks">More</a>
         </div>
         <div>
           <h4>About</h4>
-          <a href="#">Our story</a>
+          <a href="#">Our mission</a>
           <a href="#">Products</a>
           <a href="#">Contact</a>
         </div>
