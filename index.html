@@ -6,11 +6,10 @@
 <title>Blue Nova Group: Models for people and the earth</title>
 <meta name="description" content="Blue Nova Group">
 
-<!--  -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://example.com/">
+<meta property="og:url" content="https://bluenovagroup.github.io/home/">
 <meta property="og:title" content="Blue Nova Group">
-<meta property="og:description" content="Chemistry-aware machine learning for air quality modeling and environmental health.">
+<meta property="og:description" content="Digital solutions for environmental problems">
 <meta property="og:image" content=":logo-name.png">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -67,9 +66,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
 
 :focus-visible{outline:2px solid var(--azure);outline-offset:3px}
 
-/* ============================================================
-   masthead
-   ============================================================ */
+/* website masthead*/
 .mast{padding-block:clamp(52px,9vw,110px) clamp(34px,5vw,60px);text-align:center}
 .mast h1{margin:0}
 .mast img{
@@ -90,9 +87,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
   margin:clamp(30px,4vw,44px) auto 0;
 }
 
-/* ============================================================
-   PRODUCTS 
-   ============================================================ */
+/*products*/
 .prod{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,5vw,64px)}
 .prod article{border-top:3px solid var(--ink);padding-top:22px}
 .prod h2{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;margin-bottom:14px}
@@ -110,9 +105,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
 .next p{margin:0;color:var(--ink-body);max-width:62ch}
 @media(max-width:760px){.next{grid-template-columns:1fr;gap:10px}}
 
-/* ============================================================
-   TEAM
-   ============================================================ */
+/* team */
 .team{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:12px;
   background:var(--rule);border:1px solid var(--rule)}
 .team article{background:var(--paper);padding:26px 24px 28px}
@@ -123,9 +116,8 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
 @media(max-width:880px){.team{grid-template-columns:1fr}}
 @media(min-width:881px) and (max-width:1080px){.team{grid-template-columns:repeat(2,1fr)}}
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* footer */
+
 .ft{background:var(--ink);color:#fff;padding-block:clamp(48px,6vw,72px) 30px;text-align:center}
 .ft__note{color:#A79F9E;margin:0 auto 22px;font-size:.99rem;max-width:38ch}
 .ft__mail{
@@ -135,9 +127,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
 .ft__mail:hover{color:var(--azure)}
 .ft__base{padding-top:clamp(36px,5vw,52px);color:#8C8483;font-size:.87rem}
 
-/* ============================================================
-   MOTION
-   ============================================================ */
+/* move */
 .reveal{opacity:0;transform:translateY(18px);
   transition:opacity .6s cubic-bezier(.2,.6,.3,1),transform .6s cubic-bezier(.2,.6,.3,1)}
 .reveal.is-in{opacity:1;transform:none}
@@ -150,7 +140,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
 </head>
 <body>
 
-<!-- ================= MASTHEAD ================= -->
+<!-- masthead -->
 <header class="mast">
   <div class="wrap">
 	  <h1><img src="assets/logo-name.png" alt="Blue Nova Group"></h1>
@@ -160,7 +150,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
 
 <main>
 
-<!-- ================= PRODUCTS ================= -->
+<!-- products -->
 <section class="section">
   <div class="wrap">
     <div class="prod">
@@ -169,7 +159,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
         <p>A chemistry-aware deep learning air quality model that is fast, accurate, and accessible.</p>
       </article>
       <article class="reveal">
-        <h2>Enviroscan</h2>
+        <h2>Precision GeoHealth</h2>
         <p>A geospatial tool for assessing census tract data on climate, health, and
            environmental exposure risk.</p>
       </article>
@@ -182,8 +172,7 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
   </div>
 </section>
 
-<!-- ================= TEAM =================
-     ======================================== -->
+<!-- team -->
 <section class="section" id="team">
   <div class="wrap">
     <div class="reveal">
@@ -232,11 +221,11 @@ h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var
 
 </main>
 
-<!-- ================= FOOTER ================= -->
+<!-- footer -->
 <footer class="ft">
   <div class="wrap">
     <p class="ft__note">Interested in learning more? Contact us for a demo!</p>
-    <!-- TODO: replace with a domain address before sharing this link with funders. -->
+
     <a class="ft__mail" href="mailto:alexng7221@gmail.com?subject=Blue%20Nova%20Group%20enquiry">
       Book a demo
     </a>
