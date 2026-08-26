@@ -3,247 +3,470 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blue Nova Group: Models for people and the earth</title>
-<meta name="description" content="Blue Nova Group">
+<title>Blue Nova Group</title>
+<meta name="description" content="Digital solutions for environmental problems">
 
+<!-- link previews-->
+<link rel="canonical" href="https://www.blue-nova-group.com/">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://bluenovagroup.github.io/home/">
+<meta property="og:url" content="https://www.blue-nova-group.com/">
 <meta property="og:title" content="Blue Nova Group">
-<meta property="og:description" content="Digital solutions for environmental problems">
-<meta property="og:image" content=":logo-name.png">
+<meta property="og:description" content="Chemistry-aware AI air quality modeling and census-tract health exposure. Digital solutions for environmental problems.">
+<meta property="og:image" content="https://www.blue-nova-group.com/assets/logo-name.png">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="assets/logo-name.png">
+<link rel="icon" href="assets/logo.png">
 
+<!-- font stuff-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DMSans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&display=swap" rel="stylesheet">
+
 <style>
 
+/* color palette, size and font*/
 :root{
-  --ink:#201818;
-  --ink-body:#5C5453;
-  --ink-mute:#8C8483;
-  --green:#4FB05C;
-  --azure:#0E9BDD;
+/*colors*/
+  --ink:#151B1E;
+  --body:#4E5A5F;
+  --mute:#8A9499;
   --paper:#FFFFFF;
-  --rule:#E5E1E0;
+  --panel:#F5F7F8;
+  --rule:#E2E7E9;
+  --azure:#0E9BDD;
+  --green:#4FB05C;
+  --deep:#0B3C52;
 
-  --wrap:1180px;
-  --gut:clamp(20px,5vw,56px);
-  --sect:clamp(60px,7vw,104px);
+/*sizing*/
+  --wrap:1120px;
+  --gut:clamp(20px,2vw,48px);
+  --sect:clamp(64px,2vw,112px);
 
-  --f-eyebrow:.72rem;
-  --f-body:1.0625rem;
+/*font*/
+  --sans:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
 }
 
+
+/*padding*/
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'Urbanist',system-ui,-apple-system,'Segoe UI',sans-serif;
-  font-size:var(--f-body);
-  line-height:1.65;
-  font-weight:300;
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.6;font-weight:400;
   -webkit-font-smoothing:antialiased;
 }
 img{display:block;max-width:100%}
 a{color:inherit}
-h1,h2,h3{margin:0;letter-spacing:.08em;line-height:1.1;font-weight:100;color:var(--ink)}
+h1,h2,h3{margin:0;font-family:var(--sans);font-weight:500;line-height:1.1;letter-spacing:-.025em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--azure);outline-offset:3px;border-radius:2px}
 
 .wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--gut)}
-.section{padding-block:var(--sect)}
+.sect{padding-block:var(--sect)}
+.sect,#products,#sphere,#team,#contact{scroll-margin-top:84px}
+.sect--panel{background:var(--panel);border-block:1px solid var(--rule)}
 
 .eyebrow{
-  display:flex;align-items:center;gap:14px;
-  font-size:var(--f-eyebrow);font-weight:700;text-transform:uppercase;
-  letter-spacing:.18em;color:var(--ink-mute);margin:0 0 26px;
-}
-.eyebrow::after{content:"";flex:1;height:1px;background:var(--rule)}
-.eyebrow .dot{width:9px;height:9px;background:var(--azure);flex:none}
-
-:focus-visible{outline:2px solid var(--azure);outline-offset:3px}
-
-/* website masthead*/
-.mast{padding-block:clamp(52px,9vw,110px) clamp(34px,5vw,60px);text-align:center}
-.mast h1{margin:0}
-.mast img{
-  width:clamp(260px,44vw,540px);
-  height:auto;
-  margin:0 auto;
-}
-.mast__tag{
-  margin:clamp(18px,2.5vw,26px) auto 0;
-  font-size:var(--f-eyebrow);
-  font-weight:600;
-  letter-spacing:.19em;
-  text-transform:uppercase;
-  color:var(--ink-mute);
-}
-.mast::after{
-  content:"";display:block;width:72px;height:3px;background:var(--azure);
-  margin:clamp(30px,4vw,44px) auto 0;
+  font-size:2rem;font-weight:200;
+  text-transform:uppercase;letter-spacing:.15em;color:var(--ink);
+  margin-bottom:1px;
 }
 
-/*products*/
-.prod{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,5vw,64px)}
-.prod article{border-top:3px solid var(--ink);padding-top:22px}
-.prod h2{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:800;margin-bottom:14px}
-.prod p{margin:0;color:var(--ink-body)}
-@media(max-width:760px){.prod{grid-template-columns:1fr}}
-
-.next{
-  margin-top:clamp(40px,5vw,64px);
-  border-top:1px solid var(--rule);
-  padding-top:26px;
-  display:grid;grid-template-columns:180px 1fr;gap:clamp(18px,3vw,40px);
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:var(--sans);font-size:.94rem;font-weight:500;
+  padding:11px 20px;border-radius:6px;text-decoration:none;
+  border:1px solid transparent;transition:background .15s ease,border-color .15s ease,color .15s ease;
+  cursor:pointer;white-space:nowrap;
 }
-.next h3{font-size:var(--f-eyebrow);font-weight:700;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--ink-mute);padding-top:6px}
-.next p{margin:0;color:var(--ink-body);max-width:62ch}
-@media(max-width:760px){.next{grid-template-columns:1fr;gap:10px}}
+.btn--solid{background:var(--ink);color:#fff}
+.btn--solid:hover{background:var(--deep)}
+.btn--line{border-color:var(--rule);color:var(--ink);background:var(--paper)}
+.btn--line:hover{border-color:var(--ink)}
 
-/* team */
-.team{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:12px;
-  background:var(--rule);border:1px solid var(--rule)}
-.team article{background:var(--paper);padding:26px 24px 28px}
-.team .name{font-size:1.1rem;font-weight:700;letter-spacing:-.02em;line-height:1.25}
-.team .role{font-size:var(--f-eyebrow);font-weight:700;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--azure);margin-top:8px}
-.team p{margin:12px 0 0;color:var(--ink-body);font-size:.94rem;line-height:1.55}
+/* ------- nav ---- */
+.nav{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);
+  backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--rule);
+}
+.nav__in{display:flex;align-items:center;gap:24px;height:66px}
+.nav__logo{display:flex;align-items:center;gap:10px;flex:none;text-decoration:none}
+.nav__logo img{width:auto;height:55px}
+.nav__logo span{font-weight:420;font-size:1.5rem;letter-spacing:-.05em}
+.nav__links{display:flex;gap:24px;margin-left:auto;font-size:.92rem;color:var(--body)}
+.nav__links a{text-decoration:none}
+.nav__links a:hover{color:var(--ink)}
+.nav .btn{margin-left:24px}
+@media(max-width:820px){
+  .nav__links{display:none}
+  .nav .btn{margin-left:auto}
+}
+
+/* ----- hero-- */
+.hero{padding-block:clamp(52px,7vw,92px) clamp(56px,7vw,92px)}
+.hero__in{display:grid;grid-template-columns:1fr;gap:clamp(36px,6vw,72px);align-items:center}
+@media(max-width:920px){.hero__in{grid-template-columns:1fr;gap:44px}}
+.hero h1{font-size:clamp(2.05rem,4.8vw,3.3rem);max-width:20ch}
+.hero__sub{margin-top:20px;max-width:62ch;color:var(--body);font-size:clamp(1.02rem,1.4vw,1.13rem)}
+.hero__sub strong{color:var(--ink);font-weight:500}
+.hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{
+  font-size:.7rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--body);background:var(--panel);border:1px solid var(--rule);
+  padding:6px 11px;border-radius:4px;
+}
+
+
+/* --products---- */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.grid3 article{background:var(--paper);padding:28px 24px 30px}
+.grid3 h3{font-size:1.24rem;margin-bottom:6px}
+.grid3 .tag{font-size:.68rem;font-weight:500;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--azure);margin-bottom:14px}
+.grid3 p{color:var(--body);font-size:.97rem}
+.grid3 ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+.grid3 li{font-size:.9rem;color:var(--body);padding-left:16px;position:relative}
+.grid3 li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--green)}
+@media(max-width:880px){.grid3{grid-template-columns:1fr}}
+
+.lead{font-size:clamp(1.5rem,3vw,2.1rem);max-width:24ch}
+.lede{margin-top:16px;max-width:58ch;color:var(--body)}
+.head-block{margin-bottom:clamp(32px,4vw,48px)}
+
+/* --bluenovasphere----- */
+.bns{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,72px);align-items:center}
+@media(max-width:880px){.bns{grid-template-columns:1fr}}
+.bns__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.layers{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);
+  border-radius:10px;overflow:hidden}
+.layer{background:var(--paper);padding:18px 20px;display:grid;
+  grid-template-columns:auto 1fr auto;align-items:center;gap:14px}
+.layer__dot{width:9px;height:9px;border-radius:50%;background:var(--green)}
+.layer--soon .layer__dot{background:transparent;border:1.5px solid var(--rule)}
+.layer__name{font-weight:500;font-size:.97rem}
+.layer__note{font-size:.85rem;color:var(--body);margin-top:2px}
+.layer__state{font-size:.66rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--mute)}
+.layer--soon .layer__name,.layer--soon .layer__note{color:var(--mute)}
+
+
+
+/* -------- teamm------- */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+  border:1px solid var(--rule);border-radius:10px;overflow:hidden}
+.team article{background:var(--paper);padding:24px 22px 26px}
+.team .name{font-size:1.02rem;font-weight:500;letter-spacing:-.01em}
+.team .role{font-size:.66rem;font-weight:500;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--azure);margin-top:7px}
+.team p{margin-top:11px;color:var(--body);font-size:.9rem;line-height:1.5}
 @media(max-width:880px){.team{grid-template-columns:1fr}}
-@media(min-width:881px) and (max-width:1080px){.team{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:881px) and (max-width:1060px){.team{grid-template-columns:repeat(2,1fr)}}
 
-/* footer */
-
-.ft{background:var(--ink);color:#fff;padding-block:clamp(48px,6vw,72px) 30px;text-align:center}
-.ft__note{color:#A79F9E;margin:0 auto 22px;font-size:.99rem;max-width:38ch}
-.ft__mail{
-  display:inline-block;font-weight:700;font-size:1.02rem;text-decoration:none;color:#fff;
-  border-bottom:2px solid var(--azure);padding-bottom:4px;transition:color .18s ease
+/* -closing cta ---------- */
+.close{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:#0B141A;color:#fff;border-radius:12px;
+  padding:clamp(36px,6vw,64px) clamp(24px,5vw,56px);
 }
-.ft__mail:hover{color:var(--azure)}
-.ft__base{padding-top:clamp(36px,5vw,52px);color:#8C8483;font-size:.87rem}
+.close::before{
+  content:"";position:absolute;inset:0;z-index:-2;
+  background:url('assets/space.jpg') center 22% / cover no-repeat;
+}
+.close::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,20,26,.62),rgba(11,20,26,.88));
+}
+.close h2{font-size:clamp(1.6rem,3.4vw,2.3rem);color:#fff;max-width:20ch}
+.close p{margin-top:16px;color:#A9B4B9;max-width:52ch}
+.close .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.close .btn--solid{background:#fff;color:var(--ink)}
+.close .btn--solid:hover{background:var(--azure);color:#fff}
+.close .btn--line{background:transparent;color:#fff;border-color:#3A464B}
+.close .btn--line:hover{border-color:#fff}
 
-/* move */
-.reveal{opacity:0;transform:translateY(18px);
-  transition:opacity .6s cubic-bezier(.2,.6,.3,1),transform .6s cubic-bezier(.2,.6,.3,1)}
+/*------- footer ---------- */
+.ft{border-top:1px solid var(--rule);padding-block:44px 32px;margin-top:var(--sect)}
+.ft__in{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start}
+.ft__brand img{height:54px;width:auto}
+.ft__tag{margin-top:14px;color:var(--body);font-size:.9rem;max-width:34ch}
+.ft__links{display:flex;flex-wrap:wrap;gap:22px;font-size:.9rem;color:var(--body)}
+.ft__links a{text-decoration:none}
+.ft__links a:hover{color:var(--ink)}
+.ft__base{margin-top:32px;padding-top:20px;border-top:1px solid var(--rule);
+  font-size:.78rem;color:var(--mute);
+  display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+
+/*---- motion ---------- */
+.reveal{opacity:0;transform:translateY(14px);
+  transition:opacity .5s cubic-bezier(.2,.6,.3,1),transform .5s cubic-bezier(.2,.6,.3,1)}
 .reveal.is-in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+.limb{
+  height:clamp(120px,18vw,220px);
+  background:url('assets/space.jpg') center 60% / cover no-repeat;
+  border-top:1px solid var(--rule);
+}
 </style>
 </head>
 <body>
 
-<!-- masthead -->
-<header class="mast">
-  <div class="wrap">
-	  <h1><img src="assets/logo-name.png" alt="Blue Nova Group"></h1>
-    <p class="mast__tag">Predictive models for environment and human health decisions</p>
+<!--nav-->
+<nav class="nav">
+  <div class="wrap nav__in">
+    <a class="nav__logo" href="/">
+      <img src="assets/logo.png" alt="">
+      <span>Blue Nova Group</span>
+    </a>
+    <div class="nav__links">
+      <a href="#products">Products</a>
+      <a href="#team">Team</a>
+      <a href="https://bluenovasphere.onrender.com/">BlueNovaSphere</a>
+    </div>
+    <a class="btn btn--solid" href="#contact">Book a demo</a>
   </div>
-</header>
+</nav>
 
 <main>
 
-<!-- products -->
-<section class="section">
-  <div class="wrap">
-    <div class="prod">
-      <article class="reveal">
-        <h2>DeepCTM</h2>
-        <p>A chemistry-aware deep learning air quality model that is fast, accurate, and accessible.</p>
-      </article>
-      <article class="reveal">
-        <h2>Precision GeoHealth</h2>
-        <p>A geospatial tool for assessing census tract data on climate, health, and
-           environmental exposure risk.</p>
-      </article>
+<!--hero-->
+<header class="hero">
+  <div class="wrap hero__in">
+    <div>
+	<p class="eyebrow">Blue Nova Group</p>
+      <h1>Digital solutions for environmental problems.</h1>
+      <p class="hero__sub">
+        <strong>DeepCTM</strong> runs hundreds of emissions scenarios in minutes with full
+        atmospheric chemistry. <strong>Precision GeoHealth</strong> shows who is exposed and
+        what would reduce it. Both run in <strong>BlueNovaSphere</strong>, our environmental
+        data and modeling API.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="#contact">Book a demo</a>
+        <a class="btn btn--line" href="#sphere">Explore Blue Nova Sphere</a>
+      </div>
+      <div class="chips">
+        <span class="chip">Environment</span>
+        <span class="chip">Air Quality</span>
+        <span class="chip">Human Health</span>
+        <span class="chip">Climate</span>
+        <span class="chip">AI/ML</span>
+        <span class="chip">Spatiotemporal modeling</span>
+        <span class="chip">Scenario simulations</span>
+      </div>
     </div>
 
-    <div class="next reveal">
-      <h3>What's next</h3>
-      <p>Stay updated on our new developments...</p>
+    </div>
+  </div>
+</header>
+
+<!--products-->
+<section class="sect sect--panel" id="products">
+  <div class="wrap">
+    <div class="head-block reveal">
+      <p class="eyebrow">Products</p>
+      <h2 class="lead">Our tools help industry, technology, environment, engineering, and public health leaders make informed decisions.</h2>
+      <p class="lede">
+        Fast, efficient, accessible digital tools with geospatial and predictive capabilities.
+      </p>
+    </div>
+
+    <div class="grid3 reveal">
+      <article>
+        <p class="tag">Simulate</p>
+        <h3>DeepCTM</h3>
+        <p>A chemistry-aware deep learning surrogate for regulatory chemical transport models. Change the emissions, get a new concentration field.</p>
+        <ul>
+          <li>Hundreds of scenarios per run</li>
+          <li>Full atmospheric chemistry</li>
+          <li>Benchmarked against CAMx and CMAQ</li>
+          <li>Runs without an HPC</li>
+        </ul>
+      </article>
+      <article>
+        <p class="tag">Assess</p>
+        <h3>Precision GeoHealth</h3>
+        <p>Evaluate exposure and health burden at census-tract resolution with demographics and disease risk data.</p>
+        <ul>
+          <li>Census-tract resolution</li>
+          <li>Population and demographic data</li>
+          <li>Health outcomes</li>
+          <li>Community health needs assessments</li>
+        </ul>
+      </article>
+      <article>
+        <p class="tag">Explore</p>
+        <h3>Blue Nova Sphere</h3>
+        <p>Our web-based API for exploring our models, alongside public environmental data. All your environmental and health info in one place.</p>
+        <ul>
+          <li>Web-based API</li>
+          <li>Public and proprietary data</li>
+          <li>Free tier for research and non-profits</li>
+          <li>Preview our digital tools</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- team -->
-<section class="section" id="team">
+<!--bluenovasphere-->
+<section class="sect" id="sphere">
   <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow"><span class="dot"></span>Team</p>
+    <div class="bns">
+      <div class="reveal">
+        <p class="eyebrow">Blue Nova Sphere</p>
+        <h2 class="lead">One place for environmental, climate, and health data.</h2>
+        <p class="lede">
+          BlueNovaSphere is our web-based API that carries our models and relevant public data. Explore our products and see how geospatial environmental & health data can help you today. 
+        <div class="bns__cta">
+          <a class="btn btn--solid" href="https://bluenovasphere.onrender.com/">Explore Blue Nova Sphere</a>
+          <a class="btn btn--line" href="#contact">Don't see the tool you need? We can build it for you!</a>
+        </div>
+      </div>
+
+      <div class="layers reveal">
+        <div class="layer">
+          <span class="layer__dot"></span>
+          <div>
+            <div class="layer__name">Public environmental data</div>
+            <div class="layer__note">Monitored air quality, emissions inventories, demographics</div>
+          </div>
+          <span class="layer__state">Live</span>
+        </div>
+        <div class="layer">
+          <span class="layer__dot"></span>
+          <div>
+            <div class="layer__name">DeepCTM scenarios</div>
+            <div class="layer__note">Emissions-responsive concentration fields</div>
+          </div>
+          <span class="layer__state">Live</span>
+        </div>
+        <div class="layer">
+          <span class="layer__dot"></span>
+          <div>
+            <div class="layer__name">Precision GeoHealth</div>
+            <div class="layer__note">Census-tract exposure and health attribution</div>
+          </div>
+          <span class="layer__state">Live</span>
+        </div>
+        <div class="layer layer--soon">
+          <span class="layer__dot"></span>
+          <div>
+            <div class="layer__name">Future BNG products</div>
+            <div class="layer__note">Coming soon...</div>
+          </div>
+          <span class="layer__state">Planned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- team-->
+<section class="sect sect--panel" id="team">
+  <div class="wrap">
+    <div class="head-block reveal">
+      <p class="eyebrow">Team</p>
+      <h2 class="lead">Air quality modeling, epidemiology, environmental engineering, AI/ML.</h2>
     </div>
 
-    <div class="team">
-      <article class="reveal">
+    <div class="team reveal">
+      <article>
         <div class="name">William Vizuete, PhD</div>
         <div class="role">Founder</div>
-        <p>Environmental team</p>
+        <p>Professor, UNC Chapel Hill. Atmospheric chemistry and air quality modeling. Patent holder, prior SBIR recipient.</p>
       </article>
-
-      <article class="reveal">
+      <article>
         <div class="name">Bok H. Baek, PhD</div>
         <div class="role">Founder</div>
-        <p>Environmental team</p>
+        <p>Research Professor, George Mason University. Emissions modeling and inventory development. Patent holder.</p>
       </article>
-
-      <article class="reveal">
+      <article>
         <div class="name">Rebecca Fry, PhD</div>
         <div class="role">Founder</div>
-        <p>Public health team</p>
+        <p>Professor and Department Chair, UNC Chapel Hill. Environmental health and exposure science.</p>
       </article>
-
-      <article class="reveal">
+      <article>
         <div class="name">Julia Rager, PhD</div>
         <div class="role">Founder</div>
-        <p>Public health team</p>
+        <p>Associate Professor, UNC Chapel Hill. Toxicology and environmental health data science.</p>
       </article>
-
-      <article class="reveal">
+      <article>
         <div class="name">Alexandra Ng, PhD</div>
         <div class="role">Chief Technology Officer</div>
-        <p>Environmental team</p>
+        <p>Spatiotemporal modeling, high-performance computing, and machine learning for atmospheric systems.</p>
       </article>
-
-      <article class="reveal">
+      <article>
         <div class="name">Jia Xing, PhD</div>
         <div class="role">Founding researcher</div>
-        <p>Environmental team</p>
+        <p>Research Professor, University of Tennessee. Deep learning surrogates for chemical transport. Patent holder.</p>
       </article>
+    </div>
+  </div>
+</section>
+
+<!-- closing cta -->
+<section class="sect" id="contact">
+  <div class="wrap">
+    <div class="close reveal">
+      <h2>Don't see the tool you need? Contact us for custom geospatial environment, climate, or health tools.</h2>
+      <p>
+        Book a demo or contact us for more information.
+      </p>
+      <div class="row">
+        <a class="btn btn--solid" href="mailto:alexandra@blue-nova-group.com?subject=Blue%20Nova%20Group%20%E2%80%94%20scenario%20request">Book a demo</a>
+        <a class="btn btn--line" href="https://bluenovasphere.onrender.com/">Open BlueNovaSphere</a>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- footer -->
+<!--footer-->
 <footer class="ft">
   <div class="wrap">
-    <p class="ft__note">Interested in learning more? Contact us for a demo!</p>
-
-    <a class="ft__mail" href="mailto:alexng7221@gmail.com?subject=Blue%20Nova%20Group%20enquiry">
-      Book a demo
-    </a>
-    <div class="ft__base">&copy; 2026 Blue Nova Group</div>
+    <div class="ft__in">
+      <div class="ft__brand">
+        <img src="assets/logo-name.png" alt="Blue Nova Group">
+        <p class="ft__tag">Digital solutions for environmental problems. Air quality, climate, human health.</p>
+      </div>
+      <div class="ft__links">
+        <a href="#products">Products</a>
+        <a href="#team">Team</a>
+        <a href="https://bluenovasphere.onrender.com/">Blue Nova Sphere</a>
+        <a href="https://www.linkedin.com/company/blue-nova-group/">LinkedIn</a>
+      </div>
+    </div>
+    <div class="ft__base">
+      <span>&copy; 2026 Blue Nova Group · Chapel Hill, NC</span>
+      <span>Predictive models for environment and human health decisions</span>
+    </div>
   </div>
 </footer>
 
 <script>
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('is-in'); });
+    return;
+  }
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(en){
-      if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+      if (en.isIntersecting){ en.target.classList.add('is-in'); io.unobserve(en.target); }
     });
-  }, {rootMargin:'0px 0px -12% 0px', threshold:.08});
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-} else {
-  document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-in'); });
-}
+  }, {rootMargin:'0px 0px -10% 0px', threshold:.08});
+  els.forEach(function(el){ io.observe(el); });
+})();
 </script>
 </body>
 </html>
